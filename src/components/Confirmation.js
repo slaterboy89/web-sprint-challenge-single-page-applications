@@ -8,7 +8,7 @@ export default function Confirmation(props){
     <div>
         <h3>Confirmation Orders</h3>
         {props.user.map((user) => (
-            <User user={user} />
+            <User user={user} key={user.id} />
         ))}
 
     </div>

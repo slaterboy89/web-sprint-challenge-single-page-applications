@@ -7,6 +7,7 @@ export default function Navigation(){
         <div>
             <h1>Lambda Eats</h1>
             <button onClick={() => history.push("/")}>Home</button>
+            <button onClick={() => history.push("/pizza")}>Order Now</button>
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function Form(props){
-    const { form, updateForm } = props;
+    const { form, updateForm, handleSubmit, disable } = props;
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>
                 Name:
             < input name = 'name' value={form.name} onChange = {updateForm}/>
@@ -42,7 +42,7 @@ export default function Form(props){
                 Special Instructions:
                 <input type= 'text' name = 'instructions' value = {form.instructions} onChange = {updateForm}/>
             </label>
-            <button>Place Order</button>
+            <button disabled = {disable} type='submit'>Place Order</button>
         </form>
     )
 }
